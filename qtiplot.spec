@@ -1,3 +1,4 @@
+# TODO: optflags
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
@@ -21,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Free, platform independent clone of Origin.
 
 %description -l pl
-Wolny, niezale¿ny od platformy klon Origin.
+Wolny, niezale¿ny od platformy klon Origina.
 
 %prep
 %setup -q
