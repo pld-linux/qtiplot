@@ -1,13 +1,12 @@
-# TODO: optflags
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.6.5
+Version:	0.6.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://soft.proindependent.com/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	a8bffbcc776db061a066ed4dbab60b1e
+Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
+# Source0-md5:	ad57122739ad3ce0bf928f15a38c2457
 Source1:	%{name}.desktop
 URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
