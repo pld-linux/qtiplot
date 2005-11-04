@@ -1,12 +1,12 @@
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.6.8
+Version:	0.7.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
-# Source0-md5:	ad57122739ad3ce0bf928f15a38c2457
+# Source0-md5:	ffb1d824e82a9689ca4f96bd16b012b4
 Source1:	%{name}.desktop
 URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
@@ -34,9 +34,9 @@ cd %{name}-%{version}
 
 sed -i -e 's@-L../3rdparty/qwt/lib@@g' qtiplot-%{version}.pro
 sed -i -e 's@../3rdparty/qwt/include@%{_includedir}/qwt@g' qtiplot-%{version}.pro
-sed -i -e 's@/home/ion/qt/qwtplot3d/include@%{_includedir}/qwtplot3d@g' qtiplot-%{version}.pro
+sed -i -e 's@\$\${QTIPLOT_PATH}/qt/qwtplot3d/include@%{_includedir}/qwtplot3d@g' qtiplot-%{version}.pro
 sed -i -e 's@ debug@@g' qtiplot-%{version}.pro
-sed -i -e 's@/usr/share/doc/qtiplot/help.html@%{_docdir}/%{name}-%{version}/help.html@g' src/application.cpp
+sed -i -e 's@/usr/share/doc/qtiplot/index.html@%{_docdir}/%{name}-%{version}/help.html@g' src/application.cpp
 
 qmake -o Makefile qtiplot-%{version}.pro
 
@@ -54,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{name}-%{version}/doc/*.html
+%doc doc/*.html
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/%{name}.desktop
