@@ -1,12 +1,12 @@
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.7.1
+Version:	0.7.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
-# Source0-md5:	ffb1d824e82a9689ca4f96bd16b012b4
+# Source0-md5:	47fea7f66dcbfc461131a258dd5fb2b1
 Source1:	%{name}.desktop
 URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
