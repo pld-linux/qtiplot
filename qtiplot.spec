@@ -18,6 +18,7 @@ BuildRequires:	qt-devel >= 3.0
 BuildRequires:	qwt-devel >= 4.2.0
 BuildRequires:	qwtplot3d-devel
 BuildRequires:	sed >= 4.0
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
