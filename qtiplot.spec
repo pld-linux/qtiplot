@@ -9,6 +9,7 @@ Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
 # Source0-md5:	c58b6ba5572ab65d5aefdb2f99c164f3
 Source1:	%{name}.desktop
 Source2:	http://soft.proindependent.com/doc/manual-en.zip
+Source3:	%{name}.png
 # Source2-md5:	380d33a8381911feb53a73a067932b60
 URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
@@ -47,10 +48,12 @@ qmake -o Makefile qtiplot.pro
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,3 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc manual-en/*.html README.html
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png

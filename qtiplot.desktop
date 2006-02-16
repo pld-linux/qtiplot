@@ -2,6 +2,7 @@
 Name=qtiplot
 Comment=Data analysis and scientific plotting
 Comment[pl]=Analiza danych i naukowe rysowanie
+Icon=qtiplot.png
 Exec=qtiplot
 Terminal=false
 Type=Application
