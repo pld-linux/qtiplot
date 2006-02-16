@@ -1,12 +1,12 @@
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.7.7
+Version:	0.7.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
-# Source0-md5:	3b519a88eb6b1c90b5bbe9b4a1d7b3ea
+# Source0-md5:	c58b6ba5572ab65d5aefdb2f99c164f3
 Source1:	%{name}.desktop
 Source2:	http://soft.proindependent.com/doc/manual-en.zip
 # Source2-md5:	380d33a8381911feb53a73a067932b60
@@ -34,22 +34,21 @@ Wolny, niezale¿ny od platformy klon Origina.
 export QTDIR="%{_prefix}"
 export INSTALL_ROOT=$RPM_BUILD_ROOT
 
-cd %{name}-%{version}
+cd %{name}
 
-sed -i -e 's@-L../3rdparty/qwt/lib@@g' qtiplot-%{version}.pro
-sed -i -e 's@../3rdparty/qwt/include@%{_includedir}/qwt@g' qtiplot-%{version}.pro
-sed -i -e 's@\$\${QTIPLOT_PATH}/qt/qwtplot3d/include@%{_includedir}/qwtplot3d@g' qtiplot-%{version}.pro
-sed -i -e 's@ debug@@g' qtiplot-%{version}.pro
+sed -i -e 's@-L../3rdparty/qwt/lib@@g' qtiplot.pro
+sed -i -e 's@../3rdparty/qwt/include@%{_includedir}/qwt@g' qtiplot.pro
+sed -i -e 's@\$\${QTIPLOT_PATH}/qt/qwtplot3d/include@%{_includedir}/qwtplot3d@g' qtiplot.pro
+sed -i -e 's@ debug@@g' qtiplot.pro
 sed -i -e 's@/usr/share/doc/qtiplot/index.html@%{_docdir}/%{name}-%{version}/index.html@g' src/application.cpp
 
-qmake -o Makefile qtiplot-%{version}.pro
-
+qmake -o Makefile qtiplot.pro
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
-install %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
