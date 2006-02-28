@@ -1,16 +1,16 @@
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.7.8
+Version:	0.7.9
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
-# Source0-md5:	c58b6ba5572ab65d5aefdb2f99c164f3
+# Source0-md5:	bdda511c7d2b0a08edeb9f2a897ad580
 Source1:	%{name}.desktop
 Source2:	http://soft.proindependent.com/doc/manual-en.zip
-Source3:	%{name}.png
 # Source2-md5:	380d33a8381911feb53a73a067932b60
+Source3:	%{name}.png
 URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
 BuildRequires:	libstdc++-devel
@@ -50,10 +50,8 @@ qmake -o Makefile qtiplot.pro
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
