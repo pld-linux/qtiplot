@@ -1,12 +1,12 @@
 Summary:	Data analysis and scientific plotting
 Summary(pl):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
-Version:	0.8.1
+Version:	0.8.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://soft.proindependent.com/src/%{name}-%{version}.zip
-# Source0-md5:	04ad123d8d3e67e1b2bc10f5698eb18e
+# Source0-md5:	106024c3bf7b520e24f158439f575025
 Source1:	%{name}.desktop
 Source2:	http://soft.proindependent.com/doc/manual-en.zip
 # Source2-md5:	380d33a8381911feb53a73a067932b60
@@ -37,7 +37,7 @@ export INSTALL_ROOT=$RPM_BUILD_ROOT
 
 cd %{name}
 
-sed -i -e 's@-L../3rdparty/qwt/lib@@g' qtiplot.pro
+sed -i -e 's@../3rdparty/qwt/lib/libqwt.a@-lqwt@g' qtiplot.pro
 sed -i -e 's@../3rdparty/qwt/include@%{_includedir}/qwt@g' qtiplot.pro
 sed -i -e 's@/usr/share/doc/qtiplot/index.html@%{_docdir}/%{name}-%{version}/index.html@g' src/application.cpp
 
