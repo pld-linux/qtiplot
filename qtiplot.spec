@@ -1,5 +1,5 @@
 Summary:	Data analysis and scientific plotting
-Summary(pl):	Analiza danych i naukowe rysowanie
+Summary(pl.UTF-8):   Analiza danych i naukowe rysowanie
 Name:		qtiplot
 Version:	0.8.5
 Release:	1
@@ -25,8 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Free, platform independent clone of Origin.
 
-%description -l pl
-Wolny, niezaleøny od platformy klon Origina.
+%description -l pl.UTF-8
+Wolny, niezale≈ºny od platformy klon Origina.
 
 %prep
 %setup -q -a 2
