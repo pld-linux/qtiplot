@@ -1,5 +1,5 @@
 Summary:	Data analysis and scientific plotting
-Summary(pl.UTF-8):   Analiza danych i naukowe rysowanie
+Summary(pl.UTF-8):	Analiza danych i naukowe rysowanie
 Name:		qtiplot
 Version:	0.8.5
 Release:	1
