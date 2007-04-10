@@ -15,7 +15,7 @@ URL:		http://soft.proindependent.com/qtiplot.html
 BuildRequires:	gsl-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	qmake
-BuildRequires:	qt-devel >= 3.0
+BuildRequires:	qt-devel >= 1:3.0
 BuildRequires:	qwt-devel >= 4.2.0
 BuildRequires:	qwtplot3d-devel
 BuildRequires:	sed >= 4.0
