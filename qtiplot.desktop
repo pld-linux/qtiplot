@@ -2,10 +2,9 @@
 Name=qtiplot
 Comment=Data analysis and scientific plotting
 Comment[pl]=Analiza danych i naukowe rysowanie
-Icon=qtiplot.png
+Icon=qtiplot
 Exec=qtiplot
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Qt;Education;Science;X-Plotting;
 # vi: encoding=utf-8
